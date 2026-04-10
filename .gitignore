@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data (large files — store separately or via DVC)
+Data/VisDrone2019-DET-train/
+Data/VisDrone2019-DET-val/
+Data/VisDrone2019-DET-test-dev/
+Data/VisDrone2019-DET-test-challenge/
+# Keep YOLO-converted labels if you want to track them; otherwise add:
+# Data/VisDrone2019-DET-*/labels/
+
+# Model weights
+*.pt
+*.pth
+*.onnx
+*.engine
+*.tflite
+*.pb
+models/*.pt
+models/*.pth
+
+# Training runs (Ultralytics saves here by default)
+runs/
+
+# Results plots / large outputs
+results/**/*.png
+results/**/*.jpg
+results/**/*.csv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Misc
+*.log
+*.tmp
+wandb/
+mlruns/
