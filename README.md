@@ -7,7 +7,7 @@ Design, Optimization, and Comparative Evaluation of Modern YOLO Models for Real-
 
 ## Project Overview
 
-This project builds a complete object detection experimental pipeline using the **VisDrone2019-DET** dataset — a challenging benchmark featuring aerial drone footage with small, dense objects. The study covers:
+This project builds a complete object detection experimental pipeline using the **VisDrone2019-DET** dataset. This is a challenging benchmark featuring aerial drone footage with small, dense objects. The study covers:
 
 - Baseline training with YOLO11/YOLO26
 - Training dynamics and fitting analysis
