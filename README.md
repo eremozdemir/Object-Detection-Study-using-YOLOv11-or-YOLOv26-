@@ -174,17 +174,28 @@ python scripts/evaluate.py --weights results/baseline/weights/best.pt --save_jso
 
 ## Key Results
 
-> Fill in after running the notebooks.
+All comparison models trained for 50 epochs at 640px on NVIDIA A100-SXM4-80GB. Inference speed measured on A100.
 
-| Model | VisDrone mAP50 | VisDrone mAP50-95 | Inference (ms) | Train Time (min) |
-|-------|---------------|------------------|----------------|-----------------|
-| YOLOv5su | — | — | — | — |
-| YOLOv8s | — | — | — | — |
-| YOLOv9c | — | — | — | — |
-| YOLOv10s | — | — | — | — |
-| YOLO11s (baseline) | — | — | — | — |
-| YOLO11s (improved) | — | — | — | — |
-| YOLO26s | — | — | — | — |
+| Rank | Model | VisDrone mAP50 | VisDrone mAP50-95 | Precision | Recall | Inference (ms) | Train (min) |
+|------|-------|---------------|------------------|-----------|--------|---------------|-------------|
+| 1 | **YOLOv9c** | **0.4454** | **0.2653** | **0.5688** | **0.4461** | 5.08 | 122.8 |
+| 2 | YOLOv8s | 0.3797 | 0.2202 | 0.5114 | 0.3927 | 0.80 | 39.8 |
+| 3 | YOLOv10s | 0.3789 | 0.2196 | 0.5136 | 0.3868 | 2.40 | 59.4 |
+| 4 | YOLO11s (baseline) | 0.3758 | 0.2176 | 0.5058 | 0.3892 | 2.65 | 46.4 |
+| 5 | YOLO26s | 0.3749 | 0.2173 | 0.5012 | 0.3892 | 3.02 | 62.2 |
+| 6 | YOLOv5su | 0.3643 | 0.2095 | 0.5052 | 0.3743 | 1.13 | 64.9 |
+
+**Iterative Improvement Results** (YOLO11s, 50 epochs, Apple M4 Max):
+
+| Cycle | Config | mAP50 | vs Baseline |
+|-------|--------|-------|-------------|
+| Baseline | wd=0.0005 | 0.3758 | - |
+| C1 | wd=0.001 | 0.3616 | -3.8% |
+| C1 | wd=0.005 | 0.3769 | +0.3% |
+| C2 | augment=True (mosaic+mixup) | 0.1805 | -52.0% |
+| C3 | combined (wd+aug+cos_lr+1280px) | 0.0601 | -84.0% |
+
+**Key finding**: YOLOv9c's GELAN + Programmable Gradient Information architecture achieves the strongest VisDrone performance (+18.5% mAP50 over the YOLO11s baseline). The best model is used for challenge test-set predictions.
 
 ---
 

@@ -1,0 +1,12 @@
+{
+  "Model": "YOLO11s",
+  "Checkpoint": "yolo11s.pt",
+  "Params (M)": 9.5,
+  "mAP50": 0.3758,
+  "mAP50-95": 0.2176,
+  "Precision": 0.5058,
+  "Recall": 0.3892,
+  "Train Time (min)": 327.4,
+  "Inference (ms)": 15.6,
+  "save_dir": "results/comparison/compare_yolo11s"
+}
