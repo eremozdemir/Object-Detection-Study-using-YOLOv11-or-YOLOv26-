@@ -9,15 +9,15 @@ batch: 16
 imgsz: 640
 save: true
 save_period: -1
-cache: ram
+cache: false
 device: mps
-workers: 4
-project: /Users/toriav/Desktop/Erem/CMPE 401/Instructor Projects/Project 1/Object-Detection-Study-using-YOLOv11-or-YOLOv26-/results
-name: baseline
+workers: 0
+project: /Users/toriav/Desktop/Erem/CMPE 401/Instructor Projects/Project 1/Object-Detection-Study-using-YOLOv11-or-YOLOv26-/results/experiments
+name: c2_augment
 exist_ok: true
 pretrained: true
 optimizer: auto
-verbose: true
+verbose: false
 seed: 0
 deterministic: true
 single_cls: false
@@ -48,7 +48,7 @@ source: null
 vid_stride: 1
 stream_buffer: false
 visualize: false
-augment: false
+augment: true
 agnostic_nms: false
 classes: null
 retina_masks: false
@@ -95,11 +95,11 @@ translate: 0.1
 scale: 0.5
 shear: 0.0
 perspective: 0.0
-flipud: 0.0
+flipud: 0.1
 fliplr: 0.5
 bgr: 0.0
 mosaic: 1.0
-mixup: 0.0
+mixup: 0.1
 cutmix: 0.0
 copy_paste: 0.0
 copy_paste_mode: flip
@@ -107,4 +107,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: /Users/toriav/Desktop/Erem/CMPE 401/Instructor Projects/Project 1/Object-Detection-Study-using-YOLOv11-or-YOLOv26-/results/baseline
+save_dir: /Users/toriav/Desktop/Erem/CMPE 401/Instructor Projects/Project 1/Object-Detection-Study-using-YOLOv11-or-YOLOv26-/results/experiments/c2_augment

@@ -1,0 +1,12 @@
+{
+  "Model": "YOLOv10s",
+  "Checkpoint": "yolov10s.pt",
+  "Params (M)": 8.1,
+  "mAP50": 0.3763,
+  "mAP50-95": 0.2182,
+  "Precision": 0.5083,
+  "Recall": 0.3903,
+  "Train Time (min)": 367.0,
+  "Inference (ms)": 11.54,
+  "save_dir": "/Users/toriav/Desktop/Erem/CMPE 401/Instructor Projects/Project 1/Object-Detection-Study-using-YOLOv11-or-YOLOv26-/results/comparison/compare_yolov10s"
+}

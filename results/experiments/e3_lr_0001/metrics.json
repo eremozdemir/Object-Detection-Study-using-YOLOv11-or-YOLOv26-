@@ -1,0 +1,15 @@
+{
+  "experiment": "e3_lr_0001",
+  "model": "yolo11s.pt",
+  "override": {
+    "imgsz": 640,
+    "lr0": 0.001,
+    "lrf": 0.01
+  },
+  "mAP50": 0.3601,
+  "mAP50_95": 0.2101,
+  "precision": 0.4913,
+  "recall": 0.3697,
+  "train_min": 155.9,
+  "save_dir": "/Users/toriav/Desktop/Erem/CMPE 401/Instructor Projects/Project 1/Object-Detection-Study-using-YOLOv11-or-YOLOv26-/results/experiments/e3_lr_0001"
+}

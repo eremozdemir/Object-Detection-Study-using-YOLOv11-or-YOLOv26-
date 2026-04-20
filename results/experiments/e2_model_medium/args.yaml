@@ -1,23 +1,23 @@
 task: detect
 mode: train
-model: yolo11s.pt
+model: yolo11m.pt
 data: /Users/toriav/Desktop/Erem/CMPE 401/Instructor Projects/Project 1/Object-Detection-Study-using-YOLOv11-or-YOLOv26-/configs/visdrone.yaml
-epochs: 50
+epochs: 25
 time: null
-patience: 20
-batch: 16
+patience: 10
+batch: 8
 imgsz: 640
 save: true
 save_period: -1
-cache: ram
+cache: false
 device: mps
-workers: 4
-project: /Users/toriav/Desktop/Erem/CMPE 401/Instructor Projects/Project 1/Object-Detection-Study-using-YOLOv11-or-YOLOv26-/results
-name: baseline
+workers: 0
+project: /Users/toriav/Desktop/Erem/CMPE 401/Instructor Projects/Project 1/Object-Detection-Study-using-YOLOv11-or-YOLOv26-/results/experiments
+name: e2_model_medium
 exist_ok: true
 pretrained: true
 optimizer: auto
-verbose: true
+verbose: false
 seed: 0
 deterministic: true
 single_cls: false
@@ -107,4 +107,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: /Users/toriav/Desktop/Erem/CMPE 401/Instructor Projects/Project 1/Object-Detection-Study-using-YOLOv11-or-YOLOv26-/results/baseline
+save_dir: /Users/toriav/Desktop/Erem/CMPE 401/Instructor Projects/Project 1/Object-Detection-Study-using-YOLOv11-or-YOLOv26-/results/experiments/e2_model_medium

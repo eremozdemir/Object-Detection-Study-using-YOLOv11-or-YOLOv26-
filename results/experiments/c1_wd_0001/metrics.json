@@ -1,0 +1,9 @@
+{
+  "experiment": "c1_wd_0001",
+  "mAP50": 0.3616,
+  "mAP50_95": 0.2121,
+  "precision": 0.4952,
+  "recall": 0.3751,
+  "train_min": 385.3,
+  "save_dir": "/Users/toriav/Desktop/Erem/CMPE 401/Instructor Projects/Project 1/Object-Detection-Study-using-YOLOv11-or-YOLOv26-/results/experiments/c1_wd_0001"
+}
